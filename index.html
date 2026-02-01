@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Advanced online creative studio. Create memes, avatars, and graphics in the browser.">
+    <title>MakerSpace | Creative Studio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&family=Space+Grotesk:wght@500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="app-background">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+        <div class="grid-overlay"></div>
+    </div>
+
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="brand">
+                <i class="fa-solid fa-shapes"></i>
+                <span>MakerSpace</span>
+            </div>
+
+            <nav class="nav-menu">
+                <button class="nav-btn active" data-target="home">
+                    <i class="fa-solid fa-house"></i>
+                    <span>Home</span>
+                </button>
+                <button class="nav-btn" data-target="memes">
+                    <i class="fa-solid fa-masks-theater"></i>
+                    <span>Memes</span>
+                </button>
+                <button class="nav-btn" data-target="avatar">
+                    <i class="fa-solid fa-user-astronaut"></i>
+                    <span>Avatar</span>
+                </button>
+                <button class="nav-btn" data-target="quotes">
+                    <i class="fa-solid fa-quote-right"></i>
+                    <span>Quotes</span>
+                </button>
+            </nav>
+
+            <div class="user-history-preview">
+                <h3>Recent</h3>
+                <div id="mini-history-list" class="mini-list">
+                    <span class="empty-state">No projects</span>
+                </div>
+            </div>
+
+            <div class="sidebar-footer">
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="top-bar">
+                <div class="page-title">
+                    <h1 id="current-page-title">Welcome to MakerSpace</h1>
+                    <p id="current-page-desc">Select a tool and start creating.</p>
+                </div>
+                <div class="top-actions">
+                </div>
+            </header>
+
+            <div id="views-container">
+
+                <section id="view-home" class="view active">
+                    <div class="hero-card">
+                        <h2>Unleash Your Creativity</h2>
+                        <p>The most advanced in-browser graphics generator.</p>
+                        <div class="hero-stats">
+                            <div class="stat">
+                                <span class="number">100+</span>
+                                <span class="label">Templates</span>
+                            </div>
+                            <div class="stat">
+                                <span class="number">Free</span>
+                                <span class="label">Access</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tools-grid">
+                        <div class="tool-card" onclick="app.router.navigate('memes')">
+                            <div class="card-icon gradient-1"><i class="fa-solid fa-masks-theater"></i></div>
+                            <h3>Meme Generator</h3>
+                            <p>Create viral content in seconds.</p>
+                        </div>
+                        <div class="tool-card" onclick="app.router.navigate('avatar')">
+                            <div class="card-icon gradient-2"><i class="fa-solid fa-user-astronaut"></i></div>
+                            <h3>Avatar Creator</h3>
+                            <p>Build your digital identity.</p>
+                        </div>
+                        <div class="tool-card" onclick="app.router.navigate('quotes')">
+                            <div class="card-icon gradient-3"><i class="fa-solid fa-quote-right"></i></div>
+                            <h3>Quote Studio</h3>
+                            <p>Inspiring graphics with one click.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="view-memes" class="view">
+                    <div class="workspace">
+                        <div class="canvas-container" id="meme-canvas-container">
+                            <canvas id="meme-canvas"></canvas>
+                            <div class="canvas-overlay">
+                                <i class="fa-solid fa-image"></i>
+                                <p>Drop image or select from gallery</p>
+                            </div>
+                        </div>
+                        <div class="controls-panel">
+                            <h3>Editor</h3>
+
+                            <div class="control-group">
+                                <label>Template</label>
+                                <button class="action-btn secondary" id="meme-upload-btn">
+                                    <i class="fa-solid fa-upload"></i> Upload Custom
+                                </button>
+                                <div class="template-scroll" id="meme-templates">
+                                </div>
+                            </div>
+
+                            <div class="control-group">
+                                <label>Top Text</label>
+                                <input type="text" id="meme-text-top" placeholder="TOP TEXT">
+                            </div>
+                            <div class="control-group">
+                                <label>Bottom Text</label>
+                                <input type="text" id="meme-text-bottom" placeholder="BOTTOM TEXT">
+                            </div>
+
+                            <div class="actions-row">
+                                <button class="action-btn primary" id="meme-download">
+                                    <i class="fa-solid fa-download"></i> Download
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="view-avatar" class="view">
+                    <div class="workspace">
+                        <div class="canvas-container avatar-preview" id="avatar-canvas-container">
+                            <canvas id="avatar-canvas" width="500" height="500"></canvas>
+                        </div>
+                        <div class="controls-panel">
+                            <h3>Customization</h3>
+
+                            <div class="tabs-nav">
+                                <button class="tab-btn active" data-tab="face">Face</button>
+                                <button class="tab-btn" data-tab="eyes">Eyes</button>
+                                <button class="tab-btn" data-tab="hair">Hair</button>
+                                <button class="tab-btn" data-tab="facial_hair">Beard</button>
+                                <button class="tab-btn" data-tab="clothes">Clothes</button>
+                                <button class="tab-btn" data-tab="acce">Extras</button>
+                            </div>
+
+                            <div class="tab-content active" id="tab-face">
+                                <div class="options-grid" id="avatar-options-face"></div>
+                            </div>
+
+                            <div class="actions-row">
+                                <button class="action-btn secondary" id="avatar-randomize">
+                                    <i class="fa-solid fa-dice"></i> Randomize
+                                </button>
+                                <button class="action-btn primary" id="avatar-download">
+                                    <i class="fa-solid fa-download"></i> Download
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="view-quotes" class="view">
+                    <div class="workspace">
+                        <div class="canvas-container quote-preview" id="quote-canvas-container">
+                            <canvas id="quote-canvas" width="800" height="400"></canvas>
+                        </div>
+                        <div class="controls-panel">
+                            <h3>Content & Style</h3>
+
+                            <div class="control-group">
+                                <label>Quote</label>
+                                <textarea id="quote-text" rows="3">Enter your quote here...</textarea>
+                                <button class="action-btn small" id="quote-random-text">
+                                    <i class="fa-solid fa-shuffle"></i> Random Quote
+                                </button>
+                            </div>
+
+                            <div class="control-group">
+                                <label>Author</label>
+                                <input type="text" id="quote-author" placeholder="Author">
+                            </div>
+
+                            <div class="control-group">
+                                <label>Background</label>
+                                <div class="color-picker-row" id="quote-bg-options">
+                                </div>
+                            </div>
+
+                            <div class="actions-row">
+                                <button class="action-btn primary" id="quote-download">
+                                    <i class="fa-solid fa-download"></i> Download
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </main>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
