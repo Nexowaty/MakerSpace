@@ -25,18 +25,55 @@ class Router {
                 view.classList.add('active');
             }
         });
+    }
+}
 
-        const titles = {
-            'home': ['Welcome to MakerSpace', 'Select a tool and start creating.'],
-            'memes': ['Meme Generator', 'Create viral content.'],
-            'avatar': ['Avatar Creator', 'Build your digital identity.'],
-            'quotes': ['Quote Studio', 'Daily inspiration.']
-        };
+class LocalizationManager {
+    constructor(data) {
+        this.translations = data.translations;
+        this.currentLang = localStorage.getItem('makerLanguage') || 'en';
+        this.init();
+    }
 
-        if (titles[targetId]) {
-            document.getElementById('current-page-title').innerText = titles[targetId][0];
-            document.getElementById('current-page-desc').innerText = titles[targetId][1];
-        }
+    init() {
+        this.setLanguage(this.currentLang);
+
+        // Modal Events
+        const modal = document.getElementById('settings-modal');
+        const openBtn = document.getElementById('settings-btn');
+        const closeBtn = document.getElementById('close-settings');
+        const langSelect = document.getElementById('language-select');
+
+        if (openBtn) openBtn.addEventListener('click', () => {
+            modal.classList.remove('hidden');
+            langSelect.value = this.currentLang;
+        });
+
+        if (closeBtn) closeBtn.addEventListener('click', () => {
+            modal.classList.add('hidden');
+        });
+
+        if (langSelect) langSelect.addEventListener('change', (e) => {
+            this.setLanguage(e.target.value);
+        });
+    }
+
+    setLanguage(lang) {
+        if (!this.translations[lang]) return;
+        this.currentLang = lang;
+        localStorage.setItem('makerLanguage', lang);
+
+        const dict = this.translations[lang];
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+            const key = el.dataset.i18n;
+            if (dict[key]) {
+                if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+                    el.placeholder = dict[key];
+                } else {
+                    el.innerText = dict[key];
+                }
+            }
+        });
     }
 }
 
@@ -569,6 +606,7 @@ const App = {
     avatarGen: null,
     quoteGen: null,
     history: null,
+    localization: null,
 
     init() {
         try {
@@ -576,6 +614,7 @@ const App = {
 
             this.router = new Router();
             this.history = new HistoryManager();
+            this.localization = new LocalizationManager(data);
 
             try { this.memeGen = new MemeGenerator(data); } catch (e) { console.error("Meme Gen Error", e); }
             try { this.avatarGen = new AvatarGenerator(data); } catch (e) { console.error("Avatar Gen Error", e); }

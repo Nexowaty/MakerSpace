@@ -37,26 +37,26 @@
             <nav class="nav-menu">
                 <button class="nav-btn active" data-target="home">
                     <i class="fa-solid fa-house"></i>
-                    <span>Home</span>
+                    <span data-i18n="nav_home">Home</span>
                 </button>
                 <button class="nav-btn" data-target="memes">
                     <i class="fa-solid fa-masks-theater"></i>
-                    <span>Memes</span>
+                    <span data-i18n="nav_memes">Memes</span>
                 </button>
                 <button class="nav-btn" data-target="avatar">
                     <i class="fa-solid fa-user-astronaut"></i>
-                    <span>Avatar</span>
+                    <span data-i18n="nav_avatar">Avatar</span>
                 </button>
                 <button class="nav-btn" data-target="quotes">
                     <i class="fa-solid fa-quote-right"></i>
-                    <span>Quotes</span>
+                    <span data-i18n="nav_quotes">Quotes</span>
                 </button>
             </nav>
 
             <div class="user-history-preview">
-                <h3>Recent</h3>
+                <h3 data-i18n="history_title">Recent</h3>
                 <div id="mini-history-list" class="mini-list">
-                    <span class="empty-state">No projects</span>
+                    <span class="empty-state" data-i18n="history_empty">No projects</span>
                 </div>
             </div>
 
@@ -67,10 +67,13 @@
         <main class="main-content">
             <header class="top-bar">
                 <div class="page-title">
-                    <h1 id="current-page-title">Welcome to MakerSpace</h1>
-                    <p id="current-page-desc">Select a tool and start creating.</p>
+                    <h1 id="current-page-title" data-i18n="header_title">Welcome to MakerSpace</h1>
+                    <p id="current-page-desc" data-i18n="header_desc">Select a tool and start creating.</p>
                 </div>
                 <div class="top-actions">
+                    <button id="settings-btn" class="icon-btn">
+                        <i class="fa-solid fa-gear"></i>
+                    </button>
                 </div>
             </header>
 
@@ -78,35 +81,35 @@
 
                 <section id="view-home" class="view active">
                     <div class="hero-card">
-                        <h2>Unleash Your Creativity</h2>
-                        <p>The most advanced in-browser graphics generator.</p>
+                        <h2 data-i18n="hero_title">Unleash Your Creativity</h2>
+                        <p data-i18n="hero_desc">The most advanced in-browser graphics generator.</p>
                         <div class="hero-stats">
                             <div class="stat">
                                 <span class="number">100+</span>
-                                <span class="label">Templates</span>
+                                <span class="label" data-i18n="stat_templates">Templates</span>
                             </div>
                             <div class="stat">
-                                <span class="number">Free</span>
-                                <span class="label">Access</span>
+                                <span class="number" data-i18n="stat_free">Free</span>
+                                <span class="label" data-i18n="stat_access">Access</span>
                             </div>
                         </div>
                     </div>
 
                     <div class="tools-grid">
-                        <div class="tool-card" onclick="app.router.navigate('memes')">
+                        <div class="tool-card" onclick="App.router.navigate('memes')">
                             <div class="card-icon gradient-1"><i class="fa-solid fa-masks-theater"></i></div>
-                            <h3>Meme Generator</h3>
-                            <p>Create viral content in seconds.</p>
+                            <h3 data-i18n="card_meme_title">Meme Generator</h3>
+                            <p data-i18n="card_meme_desc">Create viral content in seconds.</p>
                         </div>
-                        <div class="tool-card" onclick="app.router.navigate('avatar')">
+                        <div class="tool-card" onclick="App.router.navigate('avatar')">
                             <div class="card-icon gradient-2"><i class="fa-solid fa-user-astronaut"></i></div>
-                            <h3>Avatar Creator</h3>
-                            <p>Build your digital identity.</p>
+                            <h3 data-i18n="card_avatar_title">Avatar Creator</h3>
+                            <p data-i18n="card_avatar_desc">Build your digital identity.</p>
                         </div>
-                        <div class="tool-card" onclick="app.router.navigate('quotes')">
+                        <div class="tool-card" onclick="App.router.navigate('quotes')">
                             <div class="card-icon gradient-3"><i class="fa-solid fa-quote-right"></i></div>
-                            <h3>Quote Studio</h3>
-                            <p>Inspiring graphics with one click.</p>
+                            <h3 data-i18n="card_quote_title">Quote Studio</h3>
+                            <p data-i18n="card_quote_desc">Inspiring graphics with one click.</p>
                         </div>
                     </div>
                 </section>
@@ -117,33 +120,33 @@
                             <canvas id="meme-canvas"></canvas>
                             <div class="canvas-overlay">
                                 <i class="fa-solid fa-image"></i>
-                                <p>Drop image or select from gallery</p>
+                                <p data-i18n="meme_drop">Drop image or select from gallery</p>
                             </div>
                         </div>
                         <div class="controls-panel">
-                            <h3>Editor</h3>
+                            <h3 data-i18n="editor_title">Editor</h3>
 
                             <div class="control-group">
-                                <label>Template</label>
+                                <label data-i18n="lbl_template">Template</label>
                                 <button class="action-btn secondary" id="meme-upload-btn">
-                                    <i class="fa-solid fa-upload"></i> Upload Custom
+                                    <i class="fa-solid fa-upload"></i> <span data-i18n="btn_upload">Upload Custom</span>
                                 </button>
                                 <div class="template-scroll" id="meme-templates">
                                 </div>
                             </div>
 
                             <div class="control-group">
-                                <label>Top Text</label>
+                                <label data-i18n="lbl_top">Top Text</label>
                                 <input type="text" id="meme-text-top" placeholder="TOP TEXT">
                             </div>
                             <div class="control-group">
-                                <label>Bottom Text</label>
+                                <label data-i18n="lbl_bottom">Bottom Text</label>
                                 <input type="text" id="meme-text-bottom" placeholder="BOTTOM TEXT">
                             </div>
 
                             <div class="actions-row">
                                 <button class="action-btn primary" id="meme-download">
-                                    <i class="fa-solid fa-download"></i> Download
+                                    <i class="fa-solid fa-download"></i> <span data-i18n="btn_download">Download</span>
                                 </button>
                             </div>
                         </div>
@@ -156,15 +159,15 @@
                             <canvas id="avatar-canvas" width="500" height="500"></canvas>
                         </div>
                         <div class="controls-panel">
-                            <h3>Customization</h3>
+                            <h3 data-i18n="customization_title">Customization</h3>
 
                             <div class="tabs-nav">
-                                <button class="tab-btn active" data-tab="face">Face</button>
-                                <button class="tab-btn" data-tab="eyes">Eyes</button>
-                                <button class="tab-btn" data-tab="hair">Hair</button>
-                                <button class="tab-btn" data-tab="facial_hair">Beard</button>
-                                <button class="tab-btn" data-tab="clothes">Clothes</button>
-                                <button class="tab-btn" data-tab="acce">Extras</button>
+                                <button class="tab-btn active" data-tab="face" data-i18n="tab_face">Face</button>
+                                <button class="tab-btn" data-tab="eyes" data-i18n="tab_eyes">Eyes</button>
+                                <button class="tab-btn" data-tab="hair" data-i18n="tab_hair">Hair</button>
+                                <button class="tab-btn" data-tab="facial_hair" data-i18n="tab_beard">Beard</button>
+                                <button class="tab-btn" data-tab="clothes" data-i18n="tab_clothes">Clothes</button>
+                                <button class="tab-btn" data-tab="acce" data-i18n="tab_extras">Extras</button>
                             </div>
 
                             <div class="tab-content active" id="tab-face">
@@ -173,10 +176,10 @@
 
                             <div class="actions-row">
                                 <button class="action-btn secondary" id="avatar-randomize">
-                                    <i class="fa-solid fa-dice"></i> Randomize
+                                    <i class="fa-solid fa-dice"></i> <span data-i18n="btn_randomize">Randomize</span>
                                 </button>
                                 <button class="action-btn primary" id="avatar-download">
-                                    <i class="fa-solid fa-download"></i> Download
+                                    <i class="fa-solid fa-download"></i> <span data-i18n="btn_download">Download</span>
                                 </button>
                             </div>
                         </div>
@@ -189,30 +192,31 @@
                             <canvas id="quote-canvas" width="800" height="400"></canvas>
                         </div>
                         <div class="controls-panel">
-                            <h3>Content & Style</h3>
+                            <h3 data-i18n="content_style_title">Content & Style</h3>
 
                             <div class="control-group">
-                                <label>Quote</label>
-                                <textarea id="quote-text" rows="3">Enter your quote here...</textarea>
+                                <label data-i18n="lbl_quote">Quote</label>
+                                <textarea id="quote-text" rows="3" placeholder="Enter your quote here..."></textarea>
                                 <button class="action-btn small" id="quote-random-text">
-                                    <i class="fa-solid fa-shuffle"></i> Random Quote
+                                    <i class="fa-solid fa-shuffle"></i> <span data-i18n="btn_random_quote">Random
+                                        Quote</span>
                                 </button>
                             </div>
 
                             <div class="control-group">
-                                <label>Author</label>
+                                <label data-i18n="lbl_author">Author</label>
                                 <input type="text" id="quote-author" placeholder="Author">
                             </div>
 
                             <div class="control-group">
-                                <label>Background</label>
+                                <label data-i18n="lbl_background">Background</label>
                                 <div class="color-picker-row" id="quote-bg-options">
                                 </div>
                             </div>
 
                             <div class="actions-row">
                                 <button class="action-btn primary" id="quote-download">
-                                    <i class="fa-solid fa-download"></i> Download
+                                    <i class="fa-solid fa-download"></i> <span data-i18n="btn_download">Download</span>
                                 </button>
                             </div>
                         </div>
@@ -223,33 +227,23 @@
         </main>
     </div>
 
-    <div style="position: absolute; z-index: 99999">
-        <input autocomplete="off" type="checkbox" id="aadsstickyml41vmvc" hidden />
-        <div style="padding-top: 0; padding-bottom: 0;">
-            <div
-                style="width:15%;height:100%;position:fixed;text-align:center;font-size:0;top:50%;transform:translateY(-50%);right:0;min-width:100px">
-                <label for="aadsstickyml41vmvc"
-                    style="bottom: 24px;margin:0 auto;right:0;left:0;max-width:24px; position: absolute;border-radius: 4px; background: rgba(248, 248, 249, 0.70); padding: 4px;z-index: 99999;cursor:pointer">
-                    <svg fill="#000000" height="16px" width="16px" xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 490 490">
-                        <polygon
-                            points="456.851,0 245,212.564 33.149,0 0.708,32.337 212.669,245.004 0.708,457.678 33.149,490 245,277.443 456.851,490 489.292,457.678 277.331,245.004 489.292,32.337 " />
-                    </svg>
-                </label>
-                <div id="frame"
-                    style="width: 100%;margin: auto;position: relative; z-index: 99998;height:100%; display: flex;flex-direction: column; justify-content: center">
-                    <iframe data-aa=2426195 src=//acceptable.a-ads.com/2426195/?size=Adaptive
-                        style='border:0; padding:0; width:70%; height:70%; overflow:hidden; margin: 0 auto'></iframe>
-                </div>
+    <div id="settings-modal" class="settings-modal hidden">
+        <div class="settings-content">
+            <h3>Settings</h3>
+            <div class="control-group">
+                <label>Language</label>
+                <select id="language-select">
+                    <option value="en">English</option>
+                    <option value="pl">Polish</option>
+                    <option value="es">Spanish</option>
+                    <option value="it">Italian</option>
+                    <option value="de">German</option>
+                    <option value="fr">French</option>
+                </select>
             </div>
-            <style>
-                #aadsstickyml41vmvc:checked+div {
-                    display: none;
-                }
-            </style>
+            <button id="close-settings" class="action-btn secondary">Close</button>
         </div>
     </div>
-
     <script src="data.js"></script>
     <script src="script.js"></script>
 </body>

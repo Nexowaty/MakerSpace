@@ -49,5 +49,97 @@ const APP_DATA = {
         "linear-gradient(to right, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%)",
         "linear-gradient(to top, #48c6ef 0%, #6f86d6 100%)",
         "linear-gradient(to right, #00dbde 0%, #fc00ff 100%)"
-    ]
+    ],
+    "translations": {
+        "en": {
+            "nav_home": "Home", "nav_memes": "Memes", "nav_avatar": "Avatar", "nav_quotes": "Quotes",
+            "history_title": "Recent", "history_empty": "No projects",
+            "header_title": "Welcome to MakerSpace", "header_desc": "Select a tool and start creating.",
+            "hero_title": "Unleash Your Creativity", "hero_desc": "The most advanced in-browser graphics generator.",
+            "stat_templates": "Templates", "stat_free": "Free", "stat_access": "Access",
+            "card_meme_title": "Meme Generator", "card_meme_desc": "Create viral content in seconds.",
+            "card_avatar_title": "Avatar Creator", "card_avatar_desc": "Build your digital identity.",
+            "card_quote_title": "Quote Studio", "card_quote_desc": "Inspiring graphics with one click.",
+            "meme_drop": "Drop image or select from gallery", "editor_title": "Editor",
+            "lbl_template": "Template", "btn_upload": "Upload Custom", "lbl_top": "Top Text", "lbl_bottom": "Bottom Text", "btn_download": "Download",
+            "customization_title": "Customization", "tab_face": "Face", "tab_eyes": "Eyes", "tab_hair": "Hair", "tab_beard": "Beard", "tab_clothes": "Clothes", "tab_extras": "Extras",
+            "btn_randomize": "Randomize",
+            "content_style_title": "Content & Style", "lbl_quote": "Quote", "ph_quote": "Enter your quote here...", "btn_random_quote": "Random Quote", "lbl_author": "Author", "lbl_background": "Background"
+        },
+        "pl": {
+            "nav_home": "Strona główna", "nav_memes": "Memy", "nav_avatar": "Awatar", "nav_quotes": "Cytaty",
+            "history_title": "Ostatnie", "history_empty": "Brak projektów",
+            "header_title": "Witaj w MakerSpace", "header_desc": "Wybierz narzędzie i zacznij tworzyć.",
+            "hero_title": "Uwolnij kreatywność", "hero_desc": "Najbardziej zaawansowany generator grafiki w przeglądarce.",
+            "stat_templates": "Szablonów", "stat_free": "Darmowy", "stat_access": "Dostęp",
+            "card_meme_title": "Generator Memów", "card_meme_desc": "Twórz wiralowe treści w sekundy.",
+            "card_avatar_title": "Kreator Awatarów", "card_avatar_desc": "Stwórz swoją cyfrową tożsamość.",
+            "card_quote_title": "Studio Cytatów", "card_quote_desc": "Inspirujące grafiki jednym kliknięciem.",
+            "meme_drop": "Upuść obraz lub wybierz z galerii", "editor_title": "Edytor",
+            "lbl_template": "Szablon", "btn_upload": "Wgraj własny", "lbl_top": "Tekst górny", "lbl_bottom": "Tekst dolny", "btn_download": "Pobierz",
+            "customization_title": "Dostosuj", "tab_face": "Twarz", "tab_eyes": "Oczy", "tab_hair": "Włosy", "tab_beard": "Broda", "tab_clothes": "Ubranie", "tab_extras": "Dodatki",
+            "btn_randomize": "Losuj",
+            "content_style_title": "Treść i Styl", "lbl_quote": "Cytat", "ph_quote": "Wpisz swój cytat...", "btn_random_quote": "Losuj cytat", "lbl_author": "Autor", "lbl_background": "Tło"
+        },
+        "es": {
+            "nav_home": "Inicio", "nav_memes": "Memes", "nav_avatar": "Avatar", "nav_quotes": "Citas",
+            "history_title": "Reciente", "history_empty": "Sin proyectos",
+            "header_title": "Bienvenido a MakerSpace", "header_desc": "Selecciona una herramienta y comienza a crear.",
+            "hero_title": "Desata tu creatividad", "hero_desc": "El generador de gráficos más avanzado en el navegador.",
+            "stat_templates": "Plantillas", "stat_free": "Gratis", "stat_access": "Acceso",
+            "card_meme_title": "Generador de Memes", "card_meme_desc": "Crea contenido viral en segundos.",
+            "card_avatar_title": "Creador de Avatares", "card_avatar_desc": "Construye tu identidad digital.",
+            "card_quote_title": "Estudio de Citas", "card_quote_desc": "Gráficos inspiradores con un clic.",
+            "meme_drop": "Suelta imagen o selecciona de galería", "editor_title": "Editor",
+            "lbl_template": "Plantilla", "btn_upload": "Subir propio", "lbl_top": "Texto superior", "lbl_bottom": "Texto inferior", "btn_download": "Descargar",
+            "customization_title": "Personalización", "tab_face": "Cara", "tab_eyes": "Ojos", "tab_hair": "Pelo", "tab_beard": "Barba", "tab_clothes": "Ropa", "tab_extras": "Extras",
+            "btn_randomize": "Aleatorio",
+            "content_style_title": "Contenido y Estilo", "lbl_quote": "Cita", "ph_quote": "Introduce tu cita aquí...", "btn_random_quote": "Cita aleatoria", "lbl_author": "Autor", "lbl_background": "Fondo"
+        },
+        "it": {
+            "nav_home": "Home", "nav_memes": "Meme", "nav_avatar": "Avatar", "nav_quotes": "Citazioni",
+            "history_title": "Recenti", "history_empty": "Nessun progetto",
+            "header_title": "Benvenuto in MakerSpace", "header_desc": "Seleziona uno strumento e inizia a creare.",
+            "hero_title": "Scatena la tua creatività", "hero_desc": "Il generatore grafico più avanzato nel browser.",
+            "stat_templates": "Modelli", "stat_free": "Gratis", "stat_access": "Accesso",
+            "card_meme_title": "Generatore di Meme", "card_meme_desc": "Crea contenuti virali in secondi.",
+            "card_avatar_title": "Creatore di Avatar", "card_avatar_desc": "Costruisci la tua identità digitale.",
+            "card_quote_title": "Studio Citazioni", "card_quote_desc": "Grafiche ispiratrici con un click.",
+            "meme_drop": "Trascina immagine o seleziona", "editor_title": "Editor",
+            "lbl_template": "Modello", "btn_upload": "Carica personalizzato", "lbl_top": "Testo superiore", "lbl_bottom": "Testo inferiore", "btn_download": "Scarica",
+            "customization_title": "Personalizzazione", "tab_face": "Viso", "tab_eyes": "Occhi", "tab_hair": "Capelli", "tab_beard": "Barba", "tab_clothes": "Vestiti", "tab_extras": "Extra",
+            "btn_randomize": "Casuale",
+            "content_style_title": "Contenuto e Stile", "lbl_quote": "Citazione", "ph_quote": "Inserisci qui la tua citazione...", "btn_random_quote": "Citazione casuale", "lbl_author": "Autore", "lbl_background": "Sfondo"
+        },
+        "de": {
+            "nav_home": "Start", "nav_memes": "Memes", "nav_avatar": "Avatar", "nav_quotes": "Zitate",
+            "history_title": "Kürzlich", "history_empty": "Keine Projekte",
+            "header_title": "Willkommen bei MakerSpace", "header_desc": "Wähle ein Werkzeug und lege los.",
+            "hero_title": "Entfessle deine Kreativität", "hero_desc": "Der fortschrittlichste Grafikgenerator im Browser.",
+            "stat_templates": "Vorlagen", "stat_free": "Kostenlos", "stat_access": "Zugang",
+            "card_meme_title": "Meme-Generator", "card_meme_desc": "Erstelle virale Inhalte in Sekunden.",
+            "card_avatar_title": "Avatar-Ersteller", "card_avatar_desc": "Baue deine digitale Identität.",
+            "card_quote_title": "Zitat-Studio", "card_quote_desc": "Inspirierende Grafiken mit einem Klick.",
+            "meme_drop": "Bild ablegen oder aus Galerie wählen", "editor_title": "Editor",
+            "lbl_template": "Vorlage", "btn_upload": "Eigene hochladen", "lbl_top": "Text oben", "lbl_bottom": "Text unten", "btn_download": "Herunterladen",
+            "customization_title": "Anpassung", "tab_face": "Gesicht", "tab_eyes": "Augen", "tab_hair": "Haare", "tab_beard": "Bart", "tab_clothes": "Kleidung", "tab_extras": "Extras",
+            "btn_randomize": "Zufällig",
+            "content_style_title": "Inhalt & Stil", "lbl_quote": "Zitat", "ph_quote": "Gib hier dein Zitat ein...", "btn_random_quote": "Zufälliges Zitat", "lbl_author": "Autor", "lbl_background": "Hintergrund"
+        },
+        "fr": {
+            "nav_home": "Accueil", "nav_memes": "Mèmes", "nav_avatar": "Avatar", "nav_quotes": "Citations",
+            "history_title": "Récent", "history_empty": "Aucun projet",
+            "header_title": "Bienvenue sur MakerSpace", "header_desc": "Sélectionnez un outil et commencez à créer.",
+            "hero_title": "Libérez votre créativité", "hero_desc": "Le générateur graphique le plus avancé.",
+            "stat_templates": "Modèles", "stat_free": "Gratuit", "stat_access": "Accès",
+            "card_meme_title": "Générateur de Mèmes", "card_meme_desc": "Créez du contenu viral en quelques secondes.",
+            "card_avatar_title": "Créateur d'Avatar", "card_avatar_desc": "Construisez votre identité numérique.",
+            "card_quote_title": "Studio de Citations", "card_quote_desc": "Graphismes inspirants en un clic.",
+            "meme_drop": "Déposez une image ou sélectionnez", "editor_title": "Éditeur",
+            "lbl_template": "Modèle", "btn_upload": "Importer", "lbl_top": "Texte haut", "lbl_bottom": "Texte bas", "btn_download": "Télécharger",
+            "customization_title": "Personnalisation", "tab_face": "Visage", "tab_eyes": "Yeux", "tab_hair": "Cheveux", "tab_beard": "Barbe", "tab_clothes": "Vêtements", "tab_extras": "Extras",
+            "btn_randomize": "Aléatoire",
+            "content_style_title": "Contenu et Style", "lbl_quote": "Citation", "ph_quote": "Entrez votre citation ici...", "btn_random_quote": "Citation aléatoire", "lbl_author": "Auteur", "lbl_background": "Arrière-plan"
+        }
+    }
 };
