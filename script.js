@@ -85,6 +85,12 @@ class MemeGenerator {
         this.currentImage = null;
         this.textTop = '';
         this.textBottom = '';
+        this.filters = {
+            brightness: 100,
+            contrast: 100,
+            grayscale: 0,
+            sepia: 0
+        };
 
         this.init();
     }
@@ -106,6 +112,26 @@ class MemeGenerator {
         });
         document.getElementById('meme-text-bottom').addEventListener('input', (e) => {
             this.textBottom = e.target.value;
+            this.draw();
+        });
+
+        // Filter events
+        const updateFilter = (type, val) => {
+            this.filters[type] = val;
+            this.draw();
+        };
+
+        document.getElementById('filter-brightness').addEventListener('input', (e) => updateFilter('brightness', e.target.value));
+        document.getElementById('filter-contrast').addEventListener('input', (e) => updateFilter('contrast', e.target.value));
+        document.getElementById('filter-grayscale').addEventListener('input', (e) => updateFilter('grayscale', e.target.value));
+        document.getElementById('filter-sepia').addEventListener('input', (e) => updateFilter('sepia', e.target.value));
+
+        document.getElementById('filter-reset').addEventListener('click', () => {
+            this.filters = { brightness: 100, contrast: 100, grayscale: 0, sepia: 0 };
+            document.getElementById('filter-brightness').value = 100;
+            document.getElementById('filter-contrast').value = 100;
+            document.getElementById('filter-grayscale').value = 0;
+            document.getElementById('filter-sepia').value = 0;
             this.draw();
         });
 
@@ -166,7 +192,15 @@ class MemeGenerator {
         const w = this.canvas.width;
         const h = this.canvas.height;
 
+        this.ctx.clearRect(0, 0, w, h);
+
+        // Apply filters
+        this.ctx.filter = `brightness(${this.filters.brightness}%) contrast(${this.filters.contrast}%) grayscale(${this.filters.grayscale}%) sepia(${this.filters.sepia}%)`;
+
         this.ctx.drawImage(this.currentImage, 0, 0, w, h);
+
+        // Reset filter for text
+        this.ctx.filter = 'none';
 
         this.ctx.fillStyle = 'white';
         this.ctx.strokeStyle = 'black';

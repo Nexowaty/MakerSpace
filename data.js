@@ -64,7 +64,8 @@ const APP_DATA = {
             "lbl_template": "Template", "btn_upload": "Upload Custom", "lbl_top": "Top Text", "lbl_bottom": "Bottom Text", "btn_download": "Download",
             "customization_title": "Customization", "tab_face": "Face", "tab_eyes": "Eyes", "tab_hair": "Hair", "tab_beard": "Beard", "tab_clothes": "Clothes", "tab_extras": "Extras",
             "btn_randomize": "Randomize",
-            "content_style_title": "Content & Style", "lbl_quote": "Quote", "ph_quote": "Enter your quote here...", "btn_random_quote": "Random Quote", "lbl_author": "Author", "lbl_background": "Background"
+            "content_style_title": "Content & Style", "lbl_quote": "Quote", "ph_quote": "Enter your quote here...", "btn_random_quote": "Random Quote", "lbl_author": "Author", "lbl_background": "Background",
+            "lbl_filters": "Filters", "lbl_brightness": "Brightness", "lbl_contrast": "Contrast", "lbl_grayscale": "Grayscale", "lbl_sepia": "Sepia", "btn_reset_filters": "Reset Filters"
         },
         "pl": {
             "nav_home": "Strona główna", "nav_memes": "Memy", "nav_avatar": "Awatar", "nav_quotes": "Cytaty",
@@ -79,7 +80,8 @@ const APP_DATA = {
             "lbl_template": "Szablon", "btn_upload": "Wgraj własny", "lbl_top": "Tekst górny", "lbl_bottom": "Tekst dolny", "btn_download": "Pobierz",
             "customization_title": "Dostosuj", "tab_face": "Twarz", "tab_eyes": "Oczy", "tab_hair": "Włosy", "tab_beard": "Broda", "tab_clothes": "Ubranie", "tab_extras": "Dodatki",
             "btn_randomize": "Losuj",
-            "content_style_title": "Treść i Styl", "lbl_quote": "Cytat", "ph_quote": "Wpisz swój cytat...", "btn_random_quote": "Losuj cytat", "lbl_author": "Autor", "lbl_background": "Tło"
+            "content_style_title": "Treść i Styl", "lbl_quote": "Cytat", "ph_quote": "Wpisz swój cytat...", "btn_random_quote": "Losuj cytat", "lbl_author": "Autor", "lbl_background": "Tło",
+            "lbl_filters": "Filtry", "lbl_brightness": "Jasność", "lbl_contrast": "Kontrast", "lbl_grayscale": "Szarość", "lbl_sepia": "Sepia", "btn_reset_filters": "Resetuj"
         },
         "es": {
             "nav_home": "Inicio", "nav_memes": "Memes", "nav_avatar": "Avatar", "nav_quotes": "Citas",
@@ -94,7 +96,8 @@ const APP_DATA = {
             "lbl_template": "Plantilla", "btn_upload": "Subir propio", "lbl_top": "Texto superior", "lbl_bottom": "Texto inferior", "btn_download": "Descargar",
             "customization_title": "Personalización", "tab_face": "Cara", "tab_eyes": "Ojos", "tab_hair": "Pelo", "tab_beard": "Barba", "tab_clothes": "Ropa", "tab_extras": "Extras",
             "btn_randomize": "Aleatorio",
-            "content_style_title": "Contenido y Estilo", "lbl_quote": "Cita", "ph_quote": "Introduce tu cita aquí...", "btn_random_quote": "Cita aleatoria", "lbl_author": "Autor", "lbl_background": "Fondo"
+            "content_style_title": "Contenido y Estilo", "lbl_quote": "Cita", "ph_quote": "Introduce tu cita aquí...", "btn_random_quote": "Cita aleatoria", "lbl_author": "Autor", "lbl_background": "Fondo",
+            "lbl_filters": "Filtros", "lbl_brightness": "Brillo", "lbl_contrast": "Contraste", "lbl_grayscale": "Escala de grises", "lbl_sepia": "Sepia", "btn_reset_filters": "Restablecer"
         },
         "it": {
             "nav_home": "Home", "nav_memes": "Meme", "nav_avatar": "Avatar", "nav_quotes": "Citazioni",
@@ -109,7 +112,8 @@ const APP_DATA = {
             "lbl_template": "Modello", "btn_upload": "Carica personalizzato", "lbl_top": "Testo superiore", "lbl_bottom": "Testo inferiore", "btn_download": "Scarica",
             "customization_title": "Personalizzazione", "tab_face": "Viso", "tab_eyes": "Occhi", "tab_hair": "Capelli", "tab_beard": "Barba", "tab_clothes": "Vestiti", "tab_extras": "Extra",
             "btn_randomize": "Casuale",
-            "content_style_title": "Contenuto e Stile", "lbl_quote": "Citazione", "ph_quote": "Inserisci qui la tua citazione...", "btn_random_quote": "Citazione casuale", "lbl_author": "Autore", "lbl_background": "Sfondo"
+            "content_style_title": "Contenuto e Stile", "lbl_quote": "Citazione", "ph_quote": "Inserisci qui la tua citazione...", "btn_random_quote": "Citazione casuale", "lbl_author": "Autore", "lbl_background": "Sfondo",
+            "lbl_filters": "Filtri", "lbl_brightness": "Luminosità", "lbl_contrast": "Contrasto", "lbl_grayscale": "Scala di grigi", "lbl_sepia": "Seppia", "btn_reset_filters": "Reimposta"
         },
         "de": {
             "nav_home": "Start", "nav_memes": "Memes", "nav_avatar": "Avatar", "nav_quotes": "Zitate",
@@ -124,7 +128,8 @@ const APP_DATA = {
             "lbl_template": "Vorlage", "btn_upload": "Eigene hochladen", "lbl_top": "Text oben", "lbl_bottom": "Text unten", "btn_download": "Herunterladen",
             "customization_title": "Anpassung", "tab_face": "Gesicht", "tab_eyes": "Augen", "tab_hair": "Haare", "tab_beard": "Bart", "tab_clothes": "Kleidung", "tab_extras": "Extras",
             "btn_randomize": "Zufällig",
-            "content_style_title": "Inhalt & Stil", "lbl_quote": "Zitat", "ph_quote": "Gib hier dein Zitat ein...", "btn_random_quote": "Zufälliges Zitat", "lbl_author": "Autor", "lbl_background": "Hintergrund"
+            "content_style_title": "Inhalt & Stil", "lbl_quote": "Zitat", "ph_quote": "Gib hier dein Zitat ein...", "btn_random_quote": "Zufälliges Zitat", "lbl_author": "Autor", "lbl_background": "Hintergrund",
+            "lbl_filters": "Filter", "lbl_brightness": "Helligkeit", "lbl_contrast": "Kontrast", "lbl_grayscale": "Graustufen", "lbl_sepia": "Sepia", "btn_reset_filters": "Zurücksetzen"
         },
         "fr": {
             "nav_home": "Accueil", "nav_memes": "Mèmes", "nav_avatar": "Avatar", "nav_quotes": "Citations",
@@ -139,7 +144,8 @@ const APP_DATA = {
             "lbl_template": "Modèle", "btn_upload": "Importer", "lbl_top": "Texte haut", "lbl_bottom": "Texte bas", "btn_download": "Télécharger",
             "customization_title": "Personnalisation", "tab_face": "Visage", "tab_eyes": "Yeux", "tab_hair": "Cheveux", "tab_beard": "Barbe", "tab_clothes": "Vêtements", "tab_extras": "Extras",
             "btn_randomize": "Aléatoire",
-            "content_style_title": "Contenu et Style", "lbl_quote": "Citation", "ph_quote": "Entrez votre citation ici...", "btn_random_quote": "Citation aléatoire", "lbl_author": "Auteur", "lbl_background": "Arrière-plan"
+            "content_style_title": "Contenu et Style", "lbl_quote": "Citation", "ph_quote": "Entrez votre citation ici...", "btn_random_quote": "Citation aléatoire", "lbl_author": "Auteur", "lbl_background": "Arrière-plan",
+            "lbl_filters": "Filtres", "lbl_brightness": "Luminosité", "lbl_contrast": "Contraste", "lbl_grayscale": "Niveaux de gris", "lbl_sepia": "Sépia", "btn_reset_filters": "Réinitialiser"
         }
     }
 };

@@ -144,6 +144,32 @@
                                 <input type="text" id="meme-text-bottom" placeholder="BOTTOM TEXT">
                             </div>
 
+                            <div class="control-group">
+                                <label data-i18n="lbl_filters">Filters</label>
+                                <div class="filter-controls">
+                                    <div class="filter-item">
+                                        <label data-i18n="lbl_brightness">Brightness</label>
+                                        <input type="range" id="filter-brightness" min="0" max="200" value="100">
+                                    </div>
+                                    <div class="filter-item">
+                                        <label data-i18n="lbl_contrast">Contrast</label>
+                                        <input type="range" id="filter-contrast" min="0" max="200" value="100">
+                                    </div>
+                                    <div class="filter-item">
+                                        <label data-i18n="lbl_grayscale">Grayscale</label>
+                                        <input type="range" id="filter-grayscale" min="0" max="100" value="0">
+                                    </div>
+                                    <div class="filter-item">
+                                        <label data-i18n="lbl_sepia">Sepia</label>
+                                        <input type="range" id="filter-sepia" min="0" max="100" value="0">
+                                    </div>
+                                    <button class="action-btn small" id="filter-reset">
+                                        <i class="fa-solid fa-rotate-left"></i> <span
+                                            data-i18n="btn_reset_filters">Reset Filters</span>
+                                    </button>
+                                </div>
+                            </div>
+
                             <div class="actions-row">
                                 <button class="action-btn primary" id="meme-download">
                                     <i class="fa-solid fa-download"></i> <span data-i18n="btn_download">Download</span>

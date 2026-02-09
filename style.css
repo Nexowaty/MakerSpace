@@ -594,3 +594,23 @@ select:focus {
         padding: 1rem 0;
     }
 }
+
+.filter-controls {
+    display: grid;
+    gap: 1rem;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+    border-radius: 12px;
+}
+
+.filter-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.filter-item input[type="range"] {
+    width: 100%;
+    accent-color: var(--accent);
+    cursor: pointer;
+}
